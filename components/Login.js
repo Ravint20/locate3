@@ -2,9 +2,9 @@ import React,{Component} from 'react';
 import {View,Text,Button,StyleSheet,TextInput} from 'react-native';
 import {bindActionCreators} from "redux";
 import * as Actions from "./action/index";
+import {connect} from 'react-redux';
 
-
-export default class Login extends Component {
+ class Login extends Component {
     constructor(props) {
  
         super(props)
@@ -12,25 +12,13 @@ export default class Login extends Component {
         this.state = {
      
           Name: '',
-          password:"",
+          password:"",   
           
         }
      
       }
 
-      cancell(){
       
-         this.setState({
-
-
-             Nmae="",
-             password:""
-
-         })
-
-
-      }
-     
       InsertDataToServer = () =>{
      
      
@@ -51,13 +39,13 @@ export default class Login extends Component {
         name:Name,
         password:password,
      
-        
+             
      
       })
      
     }).then((response) => response.json())
           .then((responseJson) => {
-     
+           
     
             Alert.alert(responseJson);
      
@@ -71,18 +59,22 @@ export default class Login extends Component {
 render(){
 
 
-    ruturn(
+    return(
 
          <View style={styles.container}>
-
-         <TextInput placeholder="Enter Name"  onChangeText={Name => this.setState({Name})}/>
-         <TextInput placeholder="Enter Password"  onChangeText={password => this.setState({password})}/>
+         <View style={styles.Name}>
+         <TextInput placeholder="Enter Name"  underlineColorAndroid='transparent' onChangeText={Name => this.setState({Name})}/>
+         </View>
+         <View style={styles.password}>
+         <TextInput placeholder="Enter Password" secureTextEntry={true} underlineColorAndroid='transparent' onChangeText={password => this.setState({password})}/>
+         </View>
+         <View style={styles.login}>
          <Button title="Login" onPress={()=> this.props.navigation.navigate("Home")} />
         
-
          </View>
-
-
+         </View>
+ 
+  
     )
 
 
@@ -94,9 +86,45 @@ render(){
 const styles=StyleSheet.create({
 
        container:{
+         position:"absolute",
+         justifyContent:"center",
+         width:"100%",
+      height:"100%"     
+      
+       },
 
-        justifyContent:"center",
-        alignItems:"center"
+       Name:{
+         
+        borderWidth:2,
+    width:"75%",
+    left:"15%",
+    paddingHorizontal:"5%"
+
+   
+       },
+   
+       password:{
+        
+
+          
+    borderWidth:2,
+    width:"75%",
+    left:"15%",
+    marginTop:"6%",  
+    paddingHorizontal:"5%",   
+   
+
+
+       },  
+
+       login:{
+
+        width:"50%",
+ 
+        marginTop:"6%",
+       borderRadius:5,
+
+       left:"25%" 
        }
 
 

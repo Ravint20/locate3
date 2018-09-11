@@ -5,16 +5,14 @@ import { Constants } from 'expo';
 import Map from './components/Map';
 
 import PickerSelect from './components/Picker';
-import GooglePlacesInput from './components/GooglePlacesInput';
 import Container from './components/Container';
 import Input from './components/Input';
-import CancelIcon from './components/CancelIcon';
-import DirectionIcon from './components/DirectionIcon';
 import {createStackNavigator} from 'react-navigation';
 import Home from './components/Home';
 import AddItem from './components/AddItem';
 import {Provider} from 'react-redux';
-import store from './components/Store';
+import store from './components/store/index';
+import Login from "./components/Login";
 
 
   export default   class App extends React.Component {

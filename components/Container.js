@@ -1,12 +1,12 @@
 import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput,Picker,Modal,Image,Dimensions,TouchableOpacity} from 'react-native';
 import Thermometer from './Thermometer'; 
-import Direction from './Direction';
+// import Direction from './Direction';
 import Actionbutton from './Actionbutton';
 import {bindActionCreators} from "redux";
 import * as Actions from "./action/index";
-
-export default class Container extends Component {
+import {connect} from 'react-redux';      
+class Container extends Component {
 
 
     componentDidMount(){
@@ -111,7 +111,7 @@ export default class Container extends Component {
 
         logout:{
 
-         position:absolute,
+         position:"absolute",
          bottom:0,
          left:10,
          width:"10%"

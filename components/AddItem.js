@@ -26,7 +26,7 @@ import * as Actions from "./action/index";
          this.setState({
 
 
-             ID="",
+             ID:"",
              password:""
 
          })

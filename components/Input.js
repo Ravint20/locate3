@@ -1,9 +1,8 @@
 import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput,Platform} from 'react-native';
 import {SearchBar} from "react-native-elements";
-import CancelIcon from './CancelIcon';
-import Microphone from './Microphone';
-import Hamburger from './Hamburger';
+// import Microphone from './Microphone';
+// import Hamburger from './Hamburger';
 
 
 export default class Input extends Component {

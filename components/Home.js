@@ -5,11 +5,11 @@ import { Constants } from 'expo';
 import Map from './Map';
 
 import PickerSelect from './Picker';
-import GooglePlacesInput from './GooglePlacesInput';
+// import GooglePlacesInput from './GooglePlacesInput';
 import Container from './Container';
 import Input from './Input';
-import CancelIcon from './CancelIcon';
-import DirectionIcon from './DirectionIcon';
+// import CancelIcon from './CancelIcon';
+// import DirectionIcon from './DirectionIcon';
 import {createStackNavigator,TabNavigator} from 'react-navigation';     
 import Actionbutton from './Actionbutton';
 import AddItem from './AddItem';
