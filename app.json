@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "sdkVersion": "27.0.0",
+    "name": "locate",
+    "icon": "",
+    "version": "1.0.0",
+    "slug": "locate",
+    "orientation":"portrait",
+    
+    "ios": {
+      "bundleIdentifier": "comercial.app",
+      "config": {
+
+        "branch": {
+          
+          "apiKey": "AIzaSyCWqTaLF8B0s1MfGoCdjYus8UnGhEE5DWM"
+        }
+
+      }
+
+
+    },
+    "android": {
+      "package": "comercial.app",
+      "config": {
+        "googleMaps": { "apiKey": "AIzaSyCWqTaLF8B0s1MfGoCdjYus8UnGhEE5DWM" }   
+     }
+    }
+    
+  }
+}
